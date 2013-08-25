@@ -1,0 +1,17 @@
+﻿@model IEnumerable<MvcSample.Controllers.Person>
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title</h1>
+            </hgroup>
+        </div>
+    </section>
+}
+<h3>People List</h3>
+<ul>
+    @foreach (var person in Model) {
+        
+        <li>@person.Name, @person.Surname (@person.Age)</li>
+    }
+</ul>

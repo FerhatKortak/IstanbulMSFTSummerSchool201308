@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Index.mobile";
+}
+
+<h2>People List (For Mobile)</h2>
+
+<ul>
+    @foreach (var person in Model) {
+        <li>@person.Name, @person.Surname (@person.Age)</li>
+    }
+</ul>

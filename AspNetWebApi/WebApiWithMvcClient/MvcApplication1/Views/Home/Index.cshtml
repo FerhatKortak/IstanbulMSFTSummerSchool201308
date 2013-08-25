@@ -1,0 +1,11 @@
+﻿@model IEnumerable<MvcApplication1.Controllers.Car>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<ul>
+    @foreach (var item in Model) {
+        
+        <li>@item.Make, @item.Model (@item.Year)</li>
+    }
+</ul>
