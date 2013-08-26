@@ -51,8 +51,8 @@ namespace WebApplication3 {
 
         protected override void HandleUnauthenticatedRequest(UnauthenticatedRequestContext context) {
 
-            var response = context.Request.CreateResponse(HttpStatusCode.Redirect);
-            response.Headers.Location = new Uri("http://facebook.com");
+            // Do nothing here to keep going inside the pipeline and let the AuthorizeAttribute handle authorization.
+            // Useful when you allow anonymous access for some of your endpoints.
         }
     }
 }
